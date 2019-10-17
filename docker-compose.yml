@@ -5,7 +5,7 @@ services:
  #
  #
    mongo:   
-     image: luismivs/p1gps:db
+     image: luismiuclm/p1gps:db
      deploy:
        replicas: 1 
        resources:
