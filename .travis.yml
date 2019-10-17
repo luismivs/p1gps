@@ -12,6 +12,7 @@ dist: trusty
 after_success:
   - cp $TRAVIS_BUILD_DIR/src/Clients/build/libs/*.war $TRAVIS_BUILD_DIR/deploy/docker/Clients/drop/
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - export REPO=p1gps
   - export TAG=web
   - docker build -t $REPO/$TAG $TRAVIS_BUILD_DIR/deploy/docker/Clients
   - docker tag $REPO/$TAG $DOCKER_USER/$REPO:$TAG
