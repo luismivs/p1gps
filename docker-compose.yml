@@ -22,7 +22,7 @@ services:
      volumes:
        - "db-data:/data/db"
    order:
-     image: luismivs/p1gps:order
+     image: luismiuclm/p1gps:order
      depends_on:
        - "mongo"
      deploy:
@@ -36,7 +36,7 @@ services:
      ports:
        - "8080:8080"
    web:
-     image: luismivs/p1gps:web
+     image: luismiuclm/p1gps:web
      deploy:
        replicas: 1 
        resources:
